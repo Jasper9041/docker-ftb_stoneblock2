@@ -3,7 +3,7 @@ FROM openjdk:8-jre-alpine
 MAINTAINER Sean Nelson <audiohacked@gmail.com>
 
 ARG URL="https://www.feed-the-beast.com/projects/ftb-presents-stoneblock-2/files/2792352"
-ARG SERVER_FILE="FTBPresentsStoneblock2Server_1.16.0.zip
+ARG SERVER_FILE="FTBPresentsStoneblock2Server_1.16.0.zip"
 
 ENV SERVER_PORT=25565
 
