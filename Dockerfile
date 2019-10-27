@@ -16,7 +16,7 @@ RUN adduser -D minecraft && \
     chown -R minecraft:minecraft /minecraft
 
 USER minecraft
-RUN mkdir -p /minecraft/world && \
+RUN mkdir -p /minecraft/world && mkdir -p /minecraft/backups && \
     wget ${URL}  && \
     unzip ${SERVER_FILE} && \
     chmod u+x FTBInstall.sh ServerStart.sh CheckEula.sh && \
@@ -24,5 +24,5 @@ RUN mkdir -p /minecraft/world && \
     /minecraft/FTBInstall.sh
 
 EXPOSE ${SERVER_PORT}
-VOLUME ["/minecraft/world", "/minecraft/backups"]
+#VOLUME ["/minecraft/world", "/minecraft/backups"]
 CMD ["/bin/sh", "/minecraft/ServerStart.sh"]
